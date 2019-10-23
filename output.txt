@@ -1,0 +1,35 @@
+Machine 1 generated samples:
+Sample  1 : ['B', 'B', 'C', 'S'] , Hidden state sequence:  [2, 4, 1, 1]
+Sample  2 : ['B', 'A', 'C', 'B', 'D', 'D', 'D', 'B', 'D', 'C', 'B', 'D', 'B', 'D', 'C', 'B', 'D', 'C', 'A', 'D', 'C', 'B', 'D', 'D', 'A', 'D', 'S'] , Hidden state sequence:  [2, 4, 2, 4, 4, 3, 2, 4, 4, 3, 4, 2, 4, 4, 2, 4, 4, 2, 4, 3, 2, 4, 4, 2, 4, 1, 1]
+Sample  3 : ['A', 'A', 'D', 'S'] , Hidden state sequence:  [2, 4, 1, 1]
+Sample  4 : ['A', 'A', 'C', 'B', 'D', 'C', 'D', 'B', 'B', 'C', 'A', 'C', 'A', 'C', 'C', 'A', 'A', 'C', 'S'] , Hidden state sequence:  [2, 4, 2, 4, 3, 3, 3, 3, 3, 2, 4, 2, 4, 3, 3, 2, 4, 1, 1]
+Sample  5 : ['B', 'B', 'D', 'D', 'D', 'C', 'D', 'C', 'D', 'D', 'B', 'C', 'A', 'C', 'C', 'A', 'B', 'A', 'C', 'C', 'B', 'C', 'S'] , Hidden state sequence:  [2, 4, 3, 3, 3, 4, 4, 3, 4, 2, 4, 2, 4, 4, 3, 3, 2, 4, 3, 2, 4, 1, 1]
+Sample  6 : ['B', 'B', 'C', 'D', 'C', 'C', 'C', 'D', 'C', 'A', 'C', 'S'] , Hidden state sequence:  [2, 4, 3, 4, 4, 4, 4, 4, 2, 4, 1, 1]
+Sample  7 : ['A', 'A', 'C', 'S'] , Hidden state sequence:  [2, 4, 1, 1]
+Sample  8 : ['A', 'A', 'C', 'C', 'B', 'D', 'S'] , Hidden state sequence:  [2, 4, 3, 2, 4, 1, 1]
+Sample  9 : ['B', 'A', 'C', 'C', 'S'] , Hidden state sequence:  [2, 4, 4, 1, 1]
+Sample  10 : ['B', 'B', 'C', 'D', 'C', 'C', 'S'] , Hidden state sequence:  [2, 4, 4, 3, 4, 1, 1]
+
+FORWARD ALGORITHM:
+Observations =  ('A', 'D', 'C', 'B', 'D', 'C', 'C', 'S')  Fwd Prob (Machine 1) =  3.762855e-05 , Fwd Prob (Machine 2) =  8.53125e-06 , Fwd Prob log (Machine 1) =  -10.187747487186652 , Fwd Prob log (Machine 2) =  -11.67177466557904 , Best sequence coming from -  Machine 1
+Observations =  ('B', 'D', 'S')  Fwd Prob (Machine 1) =  0.075 , Fwd Prob (Machine 2) =  0.0 , Fwd Prob log (Machine 1) =  -2.5902671654458267 , Fwd Prob log (Machine 2) =  NA , Best sequence coming from -  Machine 1
+Observations =  ('B', 'C', 'C', 'B', 'D', 'D', 'C', 'A', 'C', 'S')  Fwd Prob (Machine 1) =  3.98671632e-06 , Fwd Prob (Machine 2) =  0.0 , Fwd Prob log (Machine 1) =  -12.43254264333796 , Fwd Prob log (Machine 2) =  NA , Best sequence coming from -  Machine 1
+Observations =  ('A', 'C', 'D', 'S')  Fwd Prob (Machine 1) =  0.01125 , Fwd Prob (Machine 2) =  0.0015000000000000005 , Fwd Prob log (Machine 1) =  -4.487387150331708 , Fwd Prob log (Machine 2) =  -6.502290170873972 , Best sequence coming from -  Machine 1
+Observations =  ('A', 'D', 'A', 'C', 'S')  Fwd Prob (Machine 1) =  0.0042 , Fwd Prob (Machine 2) =  0.00016250000000000002 , Fwd Prob log (Machine 1) =  -5.472670753692815 , Fwd Prob log (Machine 2) =  -8.724832556194482 , Best sequence coming from -  Machine 1
+Observations =  ('D', 'B', 'B', 'S')  Fwd Prob (Machine 1) =  0.0 , Fwd Prob (Machine 2) =  0.005750000000000001 , Fwd Prob log (Machine 1) =  NA , Fwd Prob log (Machine 2) =  -5.158555424172878 , Best sequence coming from -  Machine 2
+Observations =  ('A', 'B', 'S')  Fwd Prob (Machine 1) =  0.0 , Fwd Prob (Machine 2) =  0.015000000000000003 , Fwd Prob log (Machine 1) =  NA , Fwd Prob log (Machine 2) =  -4.199705077879927 , Best sequence coming from -  Machine 2
+Observations =  ('D', 'D', 'B', 'D', 'D', 'B', 'A', 'C', 'C', 'D', 'A', 'B', 'B', 'C', 'D', 'B', 'B', 'B', 'S')  Fwd Prob (Machine 1) =  0.0 , Fwd Prob (Machine 2) =  1.4033509570312503e-12 , Fwd Prob log (Machine 1) =  NA , Fwd Prob log (Machine 2) =  -27.292158198526653 , Best sequence coming from -  Machine 2
+Observations =  ('D', 'B', 'D', 'S')  Fwd Prob (Machine 1) =  0.0 , Fwd Prob (Machine 2) =  0.0035000000000000005 , Fwd Prob log (Machine 1) =  NA , Fwd Prob log (Machine 2) =  -5.654992310486769 , Best sequence coming from -  Machine 2
+Observations =  ('A', 'A', 'A', 'A', 'D', 'C', 'B', 'S')  Fwd Prob (Machine 1) =  0.0 , Fwd Prob (Machine 2) =  3.8390625e-06 , Fwd Prob log (Machine 1) =  NA , Fwd Prob log (Machine 2) =  -12.470282361796812 , Best sequence coming from -  Machine 2
+
+Viterbi (Machine 2): 
+Observations =  ('A', 'D', 'C', 'B', 'D', 'C', 'C', 'S') Prob =  2.8125000000000006e-06 , Log Probability =  -12.781436790433736 , Hidden State Sequence =  ['4', '2', '3', '2', '2', '3', '3', '1']
+Observations =  ('B', 'D', 'S') Prob =  0.0 , Log Probability =  NA , Hidden State Sequence =  NA
+Observations =  ('B', 'C', 'C', 'B', 'D', 'D', 'C', 'A', 'C', 'S') Prob =  0.0 , Log Probability =  NA , Hidden State Sequence =  NA
+Observations =  ('A', 'C', 'D', 'S') Prob =  0.0010000000000000002 , Log Probability =  -6.907755278982137 , Hidden State Sequence =  ['4', '3', '2', '1']
+Observations =  ('A', 'D', 'A', 'C', 'S') Prob =  0.0001125 , Log Probability =  -9.0925573363198 , Hidden State Sequence =  ['4', '4', '4', '3', '1']
+Observations =  ('D', 'B', 'B', 'S') Prob =  0.0025000000000000005 , Log Probability =  -5.991464547107982 , Hidden State Sequence =  ['4', '2', '3', '1']
+Observations =  ('A', 'B', 'S') Prob =  0.010000000000000002 , Log Probability =  -4.605170185988091 , Hidden State Sequence =  ['4', '2', '1']
+Observations =  ('D', 'D', 'B', 'D', 'D', 'B', 'A', 'C', 'C', 'D', 'A', 'B', 'B', 'C', 'D', 'B', 'B', 'B', 'S') Prob =  7.910156250000003e-15 , Log Probability =  -32.470628859849604 , Hidden State Sequence =  ['4', '2', '3', '2', '2', '3', '4', '3', '3', '4', '4', '2', '3', '3', '2', '3', '2', '3', '1']
+Observations =  ('D', 'B', 'D', 'S') Prob =  0.0015 , Log Probability =  -6.502290170873972 , Hidden State Sequence =  ['4', '2', '2', '1']
+Observations =  ('A', 'A', 'A', 'A', 'D', 'C', 'B', 'S') Prob =  1.6875000000000001e-06 , Log Probability =  -13.292262414199726 , Hidden State Sequence =  ['4', '4', '4', '4', '2', '3', '2', '1']
