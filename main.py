@@ -25,12 +25,10 @@ if __name__ == '__main__':
     model_file2 = "model2.json"
     hmm2 = Hmm(os.path.join(model_file2))
 
+    print("Machine 1 generated samples:")
+    hmm1.generator()
 
-    for i in range(10):
-        stateSEQ, obsrvations = hmm1.generator()
-        print("observation ", i+1, ":" , obsrvations)
-'''
-    print("FORWARD ALGORITHM:")
+    print("\nFORWARD ALGORITHM:")
     for obs in observations:
         p1 = hmm1.forward(obs)
         p2 = hmm2.forward(obs)
@@ -42,7 +40,7 @@ if __name__ == '__main__':
               ", Fwd Prob log (Machine 1) = ", (math.log(p1) if p1 != 0 else "NA"),
               ", Fwd Prob log (Machine 2) = ", (math.log(p2) if p2 != 0 else "NA"),
               ", Best sequence coming from - ", "Machine 1" if p1 > p2 else "Machine 2")
-        # print("Viterbi (Machine 1): ","Observations = ", obs, "Prob = ", prob,"Log Probability = ", (math.log(p1) if prob!=0 else "NA"), " Hidden State Sequence = ", hidden_states)
+        # print("Viterbi (Machine 1): ""Observations = ", obs, "Prob = ", prob,"Log Probability = ", (math.log(p1) if prob!=0 else "NA"), " Hidden State Sequence = ", hidden_states)
 
     print("\nViterbi (Machine 2): ")
     for obs in observations:
@@ -51,4 +49,3 @@ if __name__ == '__main__':
               "Prob = ", prob,
               ", Log Probability = ", (math.log(prob) if prob != 0 else "NA"),
               ", Hidden State Sequence = ", hidden_states if prob != 0 else "NA")
-'''

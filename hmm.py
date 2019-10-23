@@ -53,6 +53,7 @@ class Hmm(object):
 
     def generator(self):
         observations = []
+        obs_seq_list = []
         stateSEQ = []
         pi = [self.pi[item] for item in self.pi]
         states = list(self.states)
@@ -70,14 +71,24 @@ class Hmm(object):
                 arr = (list(self.B[symbol].values()))
             B.append(arr)
 
-        first_obs = random.choice(self.symbols, 1, p=B[int(firstState[0]) - 1])
-        stateSEQ.append(int(firstState[0]))
-        observations.append(first_obs[0])
+        while len(obs_seq_list) <= 10:
+            first_obs = random.choice(self.symbols, 1, p=B[int(firstState[0]) - 1])
+            stateSEQ.append(int(firstState[0]))
+            observations.append(first_obs[0])
 
-        while observations[-1] != 'S':
-            curr_state = stateSEQ[-1]
-            next_state = random.choice(states, 1, p=A[curr_state - 1])
-            stateSEQ.append(int(next_state[0]))
-            new_observation = random.choice(self.symbols, 1, p=B[curr_state - 1])
-            observations.append(str(new_observation[0]))
-        return stateSEQ, observations
+            while observations[-1] != 'S':
+                curr_state = stateSEQ[-1]
+                next_state = random.choice(states, 1, p=A[curr_state - 1])
+                stateSEQ.append(int(next_state[0]))
+                new_observation = random.choice(self.symbols, 1, p=B[curr_state - 1])
+                observations.append(str(new_observation[0]))
+
+            if (stateSEQ, observations) not in obs_seq_list:
+                obs_seq_list.append((stateSEQ, observations))
+            observations = []
+            stateSEQ = []
+
+
+        for i in range(10):
+            S,O = obs_seq_list[i]
+            print("Sample ", i+1, ":", O, ", Hidden state sequence: ", S)
