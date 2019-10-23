@@ -1,7 +1,6 @@
 import json
 import sys
-
-import numpy as np
+import numpy.random as random
 
 
 class Hmm(object):
@@ -52,45 +51,33 @@ class Hmm(object):
         (prob, state) = max((vit[n][y], y) for y in self.states)
         return (prob, path[state])
 
-    def observation_generator(self):
+    def generator(self):
         observations = []
         stateSEQ = []
         pi = [self.pi[item] for item in self.pi]
         states = list(self.states)
-        firstState = np.random.choice(states, 1, p=pi)
-        # B = self.B[(str(firstState))]
-        print(str(firstState))
-        # print(self.B)
+        firstState = random.choice(states, 1, p=pi)
         A = []
 
         for state in self.A:
-            # print(state)
             for symbol in state:
-                # print(self.B[symbol])
                 arr = (list(self.A[symbol].values()))
             A.append(arr)
-        print(A)
 
         B = []
         for state in self.B:
-            # print(state)
             for symbol in state:
-                # print(self.B[symbol])
                 arr = (list(self.B[symbol].values()))
             B.append(arr)
 
-        # print(B)
-        first_obs = np.random.choice(self.symbols, 1, p=B[int(firstState[0]) - 1])
-        print(first_obs)
-        #
+        first_obs = random.choice(self.symbols, 1, p=B[int(firstState[0]) - 1])
         stateSEQ.append(int(firstState[0]))
         observations.append(first_obs[0])
 
         while observations[-1] != 'S':
             curr_state = stateSEQ[-1]
-            next_state = np.random.choice(states, 1, p=A[curr_state - 1])
-            stateSEQ.append(next_state[0])
-            next_observation = np.random.choice(self.symbols, 1, p=B[curr_state - 1])
-            observations.append(next_observation[0])
-        #
-        # return observations, state_seq
+            next_state = random.choice(states, 1, p=A[curr_state - 1])
+            stateSEQ.append(int(next_state[0]))
+            new_observation = random.choice(self.symbols, 1, p=B[curr_state - 1])
+            observations.append(str(new_observation[0]))
+        return stateSEQ, observations

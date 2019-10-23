@@ -25,7 +25,10 @@ if __name__ == '__main__':
     model_file2 = "model2.json"
     hmm2 = Hmm(os.path.join(model_file2))
 
-    hmm1.observation_generator()
+
+    for i in range(10):
+        stateSEQ, obsrvations = hmm1.generator()
+        print("observation ", i+1, ":" , obsrvations)
 '''
     print("FORWARD ALGORITHM:")
     for obs in observations:
